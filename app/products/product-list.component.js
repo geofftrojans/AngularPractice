@@ -12,6 +12,9 @@ var core_1 = require("@angular/core");
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.pageTitle = 'Product List';
+        this.imageWidth = 50;
+        this.imageMargin = 2;
+        this.showImage = false;
         this.products = [
             {
                 "productID": 2,
@@ -21,7 +24,7 @@ var ProductListComponent = (function () {
                 "description": "15 gallon capacity",
                 "price": 32.99,
                 "starRating": 4.2,
-                "imageURL": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
+                "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
             },
             {
                 "productId": 5,
@@ -35,6 +38,9 @@ var ProductListComponent = (function () {
             }
         ];
     }
+    ProductListComponent.prototype.toggleImage = function () {
+        this.showImage = !this.showImage;
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
