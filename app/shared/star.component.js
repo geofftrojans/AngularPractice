@@ -18,8 +18,6 @@ var StarComponent = (function () {
     };
     StarComponent.prototype.onClick = function () {
         this.ratingClicked.emit("The rating " + this.rating + " was clicked!");
-        console.log("On click: The rating " + this.rating + " was clicked!");
-        //this.ratingClicked.emit('The rating '+this.rating+' was clicked!');
     };
     return StarComponent;
 }());
